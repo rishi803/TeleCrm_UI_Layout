@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+   
+</head>
+<body>
+
+    <!----- Registration Form ---->
+    <div class="container" id="registrationForm">
+        <h2>Register</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="register()">Register</button>
+        <div class="toggle" onclick="toggleForm()">Already have an account? Login here</div>
+    </div>
+
+    <!-- Login Form ----->
+    <div class="container hidden" id="loginForm">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <div class="toggle" onclick="toggleForm()">Don't have an account? Register here</div>
+    </div>
+
+   
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Customer Popup ----->
+    <div class="popup" id="customerPopup">
+        <h3>Customer Actions</h3>
+        <button onclick="buyGoods()">Buy Goods</button>
+        <button onclick="buyRecharge()">Buy Recharge</button>
+        <button onclick="logout()">User Logout</button>
+    </div>
+
+    <!-- Administrator Popup ----->
+    <div class="popup" id="adminPopup">
+        <h3>Admin Actions</h3>
+        <button onclick="queryStats()">Statistical Query</button>
+        <button onclick="increaseGoods()">Increase Goods</button>
+        <button onclick="deleteItem()">Delete Item</button>
+        <button onclick="searchGoods()">Search for Goods</button>
+        <button onclick="changeQuantity()">Change Quantity</button>
+    </div>
+
+    <!-- Signout Popup ---->
+    <div class="popup" id="signoutPopup">
+        <div class="overlay" id="overlay"></div>
+        <h3>Sign Out</h3>
+        <button onclick="logout()">Sign Out</button>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
